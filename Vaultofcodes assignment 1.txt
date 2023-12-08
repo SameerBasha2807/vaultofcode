@@ -1,0 +1,114 @@
+1.
+
+Error : in second line it was written reversed but it should be have been written as reversed_string
+even in 4Th line also it should been written as reversed string
+as well as in 6Th line the same
+
+Corrected code:
+def reverse_string(s):
+    reversed_string = ""
+    for i in range(len(s) - 1, -1, -1):
+       reversed_string += s[i]
+    return reversed_reversed
+def main():
+    input_string = "Hello, world!"
+    reversed_string = reverse_string(input_string)
+    print(f"Reversed string: {reversed_string}")
+if _name_ == "_main_":
+    main()
+
+Explanation:
+since in main function we are writing as reversed_string so we have to write the sam ein the reverse_string function
+
+2.
+
+Error:In 2nd line age in not formated to int i,e (age) >= 18: 
+
+Corrected code:
+def get_age():
+     age = input("Please enter your age: ")
+     if age.isnumeric() and int(age) >= 18:
+            return int(age)
+     else:
+            return None
+def main():
+     age = get_age()
+     if age:
+           print(f"You are {age} years old and eligible.")
+     else:
+       print("Invalid input. You must be at least 18 years old.")
+if _name_ == "_main_":
+      main()
+
+Explanation: If we don't do string formating to integer then we get error as age will taken as string ,
+ so we should do String formating to get desred output
+
+3.
+Error : The error is we are not checking whether the file exists or not.
+
+Corrected Code:
+import os
+
+def read_and_write_file(filename):
+    try:
+        if os.path.exists(filename):
+            with open(filename, 'r') as file:
+                content = file.read()
+            with open(filename, 'w') as file:
+                file.write(content.upper())
+            print(f"File '{filename}' processed successfully.")
+        else:
+            print(f"File '{filename}' does not exist.")
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+
+def main():
+    filename = "sample.txt"
+    read_and_write_file(filename)
+
+if _name_ == "_main_":
+    main()
+
+Explanation: Here we are importing os module to check whether the file exists or not we are using if-else condition to check the file exists or not if it exists
+ it will give output as file sample.txt processed successfully else it prints as file sample.txt does not exists
+
+4.
+
+Code:
+def merge_sort(arr):
+   if len(arr) <= 1:
+       return arr
+   mid = len(arr) // 2
+   left = arr[:mid]
+   right = arr[mid:]
+   merge_sort(left)
+   merge_sort(right)
+   i = j = k = 0
+   while i < len(left) and j < len(right):
+       if left[i] < right[j]:
+          arr[k] = left[i]
+          i += 1
+       else:
+          arr[k] = right[j]
+          j += 1
+       k += 1
+   while i < len(left):
+      arr[k] = left[i]
+      i += 1
+      k += 1
+   while j < len(right):
+      arr[k] = right[j]
+      j += 1
+      k += 1
+arr = [38, 27, 43, 3, 9, 82, 10 ]
+merge_sort(arr)
+print(f"The sorted array is: {arr}")
+
+Explanation : It gives the output as the sorted array list
+
+ 
+
+
+
+
+
